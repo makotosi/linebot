@@ -1,0 +1,26 @@
+<h1 class="heading">LINE風</h1>
+<div id="wrapper">
+  <% @chats.each do |chat| %>
+  <div class="question_Box">
+    <div class="question_image"><img src="http://lohas.nicoseiga.jp/thumb/1144377i?"></div>
+    <div class="arrow_question">
+      <%= chat.message %>
+    </div>
+  </div>
+  <div class="question_Box">
+    <div class="answer_image"><img src="http://blog-imgs-29.fc2.com/f/b/l/fblogi/1_8.jpg"></div>
+    <div class="arrow_answer">
+      <%= @answers[rand(0..@answers.size-1)] %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="new-message">
+  <%= form_for @new_message do |f| %>
+    <%= f.text_area :message %>
+    <%= f.submit %>
+  <% end %>
+  <!-- ここ追記 -->
+  <p><a href="/chats" data-method="delete">全てのメッセージを削除</a></p>
+</div>

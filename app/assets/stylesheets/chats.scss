@@ -1,0 +1,118 @@
+// Place all the styles related to the chats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.heading,.new-message{
+  text-align:center
+}
+
+body{
+  width:100%;
+  min-width:320px;
+  margin:0;
+  padding:0;
+  background-color:#6F92C0
+}
+
+#wrapper{
+  margin:10px auto;
+  width:50%;
+  height:480px;
+  overflow-y:scroll
+}
+
+.arrow_answer,.arrow_question{
+  position:relative;
+  width:45%;
+  font-size:1.5rem;
+  padding:3%
+}
+
+.arrow_question{
+  background:#fff;
+  border:1px solid #c8c8c8;
+  border-radius:10px;
+  float:left
+}
+
+.arrow_answer{
+  background:#85E249;
+  border:1px solid #85E249;
+  border-radius:10px
+}
+
+.arrow_answer{
+  float:right;
+  margin-right:30px
+}
+
+.arrow_answer:after,.arrow_answer:before,.arrow_question:after,.arrow_question:before{
+  top:30%;
+  border:solid transparent;
+  content:" ";
+  height:0;
+  width:0;
+  position:absolute;
+  pointer-events:none
+}
+
+.arrow_answer:after,.arrow_answer:before{
+  border-left-color:#85E249
+}
+
+.arrow_question:after,.arrow_question:before{
+  right:100%
+}
+
+.arrow_answer:after,.arrow_answer:before{
+  left:100%
+}
+
+.arrow_answer:after,.arrow_question:after{
+  border-color:rgba(255,255,255,0);
+  border-width:8px;margin-top:-8px
+}
+
+.arrow_question:after{
+  border-right-color:#fff
+}
+
+.arrow_answer:before,.arrow_question:before{
+  border-color:rgba(200,200,200,0);
+  border-width:9px;
+  margin-top:-9px
+}
+
+.arrow_question:before{
+  border-right-color:#c8c8c8
+}
+
+.question_image{
+  float:left;width:15%
+}
+
+.answer_image{
+  float:right;
+  width:15%
+}
+
+.answer_image img,.question_image img{
+  border-radius:50px;
+  width:50%
+}
+
+.question_Box{
+  width:100%;
+  overflow:hidden;
+  margin-bottom:3%
+}
+
+.new-message{
+  margin:0 auto;
+  width:60%
+}
+
+textarea{
+  width:400px;
+  height:100px;
+  font-size:2rem
+}
